@@ -2,7 +2,6 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const proxy = "https://corsproxy.io/?";
 async function getCity(input, setCities, index) {
   try {
     let lat, lon, displayName;
