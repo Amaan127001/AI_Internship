@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY || "c2a5e03aec2d0f72247774429b232629";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 async function getCity(input, setCities, index) {
   try {
