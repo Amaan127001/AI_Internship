@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/AI_Internship/static/css/main.039bf95e.css",
-    "main.js": "/AI_Internship/static/js/main.559ff845.js",
+    "main.js": "/AI_Internship/static/js/main.765e72dd.js",
     "index.html": "/AI_Internship/index.html",
     "main.039bf95e.css.map": "/AI_Internship/static/css/main.039bf95e.css.map",
-    "main.559ff845.js.map": "/AI_Internship/static/js/main.559ff845.js.map"
+    "main.765e72dd.js.map": "/AI_Internship/static/js/main.765e72dd.js.map"
   },
   "entrypoints": [
     "static/css/main.039bf95e.css",
-    "static/js/main.559ff845.js"
+    "static/js/main.765e72dd.js"
   ]
 }
