@@ -12,14 +12,14 @@ async function getCity(input, setCities, index) {
     if (/^\d+$/.test(query)) {
       // For 6-digit codes, assume India ("IN"); otherwise default to US.
       let country = query.length === 6 ? "IN" : "US";
-      const zipUrl = `http://api.openweathermap.org/geo/1.0/zip?zip=${query},${country}&appid=${API_KEY}`;
+      const zipUrl = `https://api.openweathermap.org/geo/1.0/zip?zip=${query},${country}&appid=${API_KEY}`;
       const zipResponse = await axios.get(zipUrl);
       lat = zipResponse.data.lat;
       lon = zipResponse.data.lon;
       displayName = zipResponse.data.name;
     } else {
       // Otherwise, treat as a city name or location string.
-      const directUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(query)}&limit=5&appid=${API_KEY}`;
+      const directUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(query)}&limit=5&appid=${API_KEY}`;
       const directResponse = await axios.get(directUrl);
       const results = directResponse.data;
       if (!results || results.length === 0) {
@@ -42,9 +42,9 @@ async function getCity(input, setCities, index) {
     }
 
     // Fetch current weather data…
-    const currentUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    const currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     // …and the 5-day forecast data.
-    const forecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
     // Run both requests concurrently.
     const [currentResponse, forecastResponse] = await Promise.all([
