@@ -34,8 +34,8 @@ A sleek and responsive React application that lets you view current weather data
 
 ## Demo
 
-![Weather App Demo](img\scr1.png)
-![Weather App Demo](img\scr2.png)
+![Weather App Demo](img/scr1.png)
+![Weather App Demo](img/scr1.png)
 
 ## Installation
 
